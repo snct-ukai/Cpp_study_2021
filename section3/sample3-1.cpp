@@ -60,7 +60,4 @@ int main(){
 
     //1番目の要素
     array[0];
-
-    //配列の大きさを取得
-    sizeof(array);
 }
