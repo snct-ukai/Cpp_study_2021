@@ -1,20 +1,14 @@
-#include <iostream>
+#include<iostream>
 #include <fstream>
-#include <cstring>
-#include <sstream>
 using namespace std;
 
 int main(void){
-    ofstream file;
-    file.open("data.txt");
-    string s;
-    while(true){
-        getline(cin,s);//stringを使用した場合のgetline関数(この書き方のほうが簡単)
-        if(s.length()){
-            file << stod(s) << endl;
-            continue;
-        }
-        break;
+    ifstream in("data.txt");//入力元ファイル
+    double sum = 0;
+    while(!in.eof()){//istreamが終端でない場合に繰り返し実行
+        double d = 0;
+        in >> d;//double型変数にファイルからの値を代入
+        sum += d;
     }
-    file.close();
+    cout << sum << endl;
 }
