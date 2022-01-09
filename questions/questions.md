@@ -10,7 +10,7 @@
     friend ostream& operator<<(ostream& o, const Pet& p);
     ```
 
-    コンストラクタでは`age=0` `name="undefined`で初期化
+    コンストラクタでは`age=0` `name="undefined"`で初期化
     operator>>()ではistreamからage, nameの順に入力
     opetator<<()ではostreamへage, nameの順に出力(区切り文字は`\t`)
 
